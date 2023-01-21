@@ -21,20 +21,18 @@ Program to find the square root for the given number(newton's method) using func
 Developed by: adhithya perumal
 RegisterNumber:22008747  
 */
-def gcd():
-    n1,n2=int(input()),int(input())
-    if n1<n2:
-        smaller=n1
-    else:
-        smaller=n2
-    for i in range(1,smaller+1):
-        if n1%i==0 and n2%i==0:
-            gcd=i
-    print("GCD of two numbers is:",gcd)
+def squareroot(num1,iternum):
+    num2=float(num1)
+    for i in range(iternum):
+        num1=0.5*(num1+num2/num1)
+    print("Square root of the number:",num1)
+num1=int(input())
+iternum=100
+squareroot(num1,iternum)
 ```
 
 ## Output:
-![output](square.png)
+![output](sqr.png)
 
 
 ## Result:
